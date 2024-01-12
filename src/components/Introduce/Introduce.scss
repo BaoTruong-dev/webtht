@@ -1,0 +1,108 @@
+@import "../../scss/import.scss";
+.introduce {
+  background: url("../../assets/images/bg_intro.jpg");
+  margin-bottom: -1px;
+
+  .main-wrapper{
+    height: 1024px;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    .mask {
+      position: absolute;
+      left: -45px;
+      bottom: -100px;
+      height: 100%;
+      
+      img{
+        height: 100%;
+      }
+
+    }
+    .introduce__wrapper {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      .right {
+        margin-top: 290px;
+        .content {
+          max-width: 600px;
+          h2 {
+            display: flex;
+            flex-direction: column;
+            color: $secondary-color;
+            font-family: "utm";
+            span:nth-child(1) {
+              font-size: 110px;
+            }
+            span:nth-child(2) {
+              font-size: 120px;
+            }
+          }
+          .text {
+            margin-top: 40px;
+            margin-bottom: 16px;
+            font-size: 20px;
+            line-height: 32px;
+          }
+          .more {
+            &:hover .more__wrapper p {
+              transform: translateY(10px);
+              opacity: 0;
+            }
+            &:hover .more__hover p {
+              transform: translateY(0);
+              opacity: 1;
+              visibility: visible;
+            }
+            &:hover .more__wrapper .img {
+              transform: translateX(10px);
+              opacity: 0;
+            }
+            &:hover .more__hover .img {
+              transform: translateX(0);
+              opacity: 1;
+              visibility: visible;
+            }
+            position: relative;
+            cursor: pointer;
+            &__wrapper {
+              @include flexCenter(none);
+              p {
+                transition: ease-in 0.5s all;
+                color: $secondary-color;
+              }
+              .img {
+                transition: ease-in 0.5s all;
+              }
+            }
+            &__hover {
+              position: absolute;
+              top: 0;
+              left: 0;
+              @include flexCenter(none);
+              p {
+                transition: ease-in 0.5s all;
+                opacity: 0;
+                transform: translateY(10px);
+                visibility: hidden;
+              }
+              .img {
+                opacity: 0;
+                visibility: hidden;
+                transition: ease-in 0.5s all;
+                transform: translateX(-10px);
+                svg {
+                  * {
+                    fill: $white-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

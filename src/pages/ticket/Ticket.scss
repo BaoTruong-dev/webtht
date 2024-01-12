@@ -1,0 +1,168 @@
+@import "../../scss/import.scss";
+
+.ticket-container {
+  background: url("../../assets/images/bg_intro.jpg");
+  
+.main-wrapper{
+  height: 2000px;
+  padding: 135px 115px 80px 115px;
+  .ticket {
+    height: 40%;
+    &-title {
+      display: flex;
+      height: 30%;
+      &-left {
+        width: 30%;
+        position: relative;
+        span {
+          color: $secondary-color;
+          font-family: "utm";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 96px;
+          position: absolute;
+          top: -10px;
+        }
+      }
+      &-right {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        .infoTitle {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          &-desc {
+            display: flex;
+            gap: 5px;
+            &-name {
+              color: $secondary-color;
+            }
+          }
+        }
+        span {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          color: #f3f3f3;
+        }
+      }
+    }
+    .ticketList {
+      height: 70%;
+      hr {
+        border: 1px solid #eeeeee;
+      }
+      &-item {
+        height: 80px;
+        padding: 25px 0;
+        display: flex;
+        align-items: center;
+        &-left {
+          width: 45%;
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          .type {
+            color: #f3f3f3;
+            font-family: "utm";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            width: 140px;
+          }
+          .desc {
+            color: #d9d9d9;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+        &-right {
+          width: 50%;
+          display: flex;
+          flex-direction: row-reverse;
+          span {
+            font-family: "utm";
+            font-weight: 400;
+            font-size: 24px;
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .info {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    align-items: center;
+    hr {
+      border: 1px solid #ffffff;
+      width: 55%;
+      margin: 0 auto;
+    }
+    &-title {
+      font-weight: 400;
+      font-size: 64px;
+      color: $secondary-color;
+    }
+    &-list {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      &-item {
+        width: calc((100% / 3) - 40px);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        img {
+          height: 550px;
+          width: 100%;
+          object-fit: cover;
+        }
+        span {
+          color: #fff;
+          font-family: "utm";
+          font-weight: 400;
+          font-size: 24px;
+        }
+      }
+    }
+    button {
+      position: relative;
+      padding: 8px 48px;
+      border: 1px solid #f4f4f4;
+      border-radius: 8px;
+      background-color: transparent;
+      color: #f4f4f4;
+      font-family: "Montserrat", sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      margin-top: 30px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        transition: 0.5s all ease-in;
+        z-index: 10 ;
+      }
+      &:hover::after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+}

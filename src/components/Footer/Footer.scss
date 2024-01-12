@@ -1,0 +1,69 @@
+@import "../../scss/import.scss";
+footer {
+  background: url("../../assets/images/bg_footer.jpg") no-repeat center center;
+  height: 200px;
+  background-size: cover;
+  font-weight: 600;
+  @include flexCenter;
+
+  //
+  .group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    .img {
+      margin-right: 20px;
+    }
+    p {
+      color: $black-color;
+      max-width: 356px;
+      line-height: 140%;
+    }
+  }
+  //   Chung
+  .container {
+    @include flexCenter(space-between);
+    .left {
+      display: flex;
+      align-items: center;
+      .img {
+        margin-right: 15px;
+      }
+      .text {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+          color: $black-color;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .center {
+    }
+    .right {
+      .group:nth-child(1) {
+        .img {
+          width: 24px;
+          height: 24px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      // .group {
+      //   cursor: pointer;
+      //   p {
+      //     transition: 0.3s all;
+      //   }
+      // }
+
+      // .group:hover p {
+      //   color: $white-color;
+      // }
+    }
+  }
+}

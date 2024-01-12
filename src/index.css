@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "utm";
+  src: url("./assets/fonts/font-utm.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
